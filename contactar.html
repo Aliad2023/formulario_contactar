@@ -46,15 +46,81 @@
     </head>
     <body>
         <!-- HEADER, zona superior que se repite en todos los HTML -->
-        <header>
-
-        </header>
+        <header></header>
         <!-- MAIN, zona central diferente en todos los HTML, es el contenido diferenciador de las páginas -->
         <main>
-
+            <section class="izquierda">
+                <h4 class="izquierda__titulo">COMENTARIO ></h4>
+            </section>
+            <section class="derecha">
+                <form action="">
+                    <ul>
+                        <li>
+                            <!-- nombre -->
+                            <label for="nombre">Nombre *</label>
+                            <input
+                                type="text"
+                                required
+                                placeholder="introduce tu nombre"
+                                name="nombre"
+                                id=""
+                            />
+                        </li>
+                        <li>
+                            <!-- apellidos -->
+                            <label for="apellidos">Apellidos</label>
+                            <input
+                                type="text"
+                                placeholder="introduce tus apellidos"
+                                name="apellidos"
+                                id=""
+                            />
+                        </li>
+                        <li>
+                            <!-- email -->
+                            <label for="mail">Correo electrónico *</label>
+                            <input
+                                type="email"
+                                required
+                                placeholder="introduce tu email"
+                                name="mail"
+                                id=""
+                            />
+                        </li>
+                        <li>
+                            <!-- comentario -->
+                            <label for="comentario">Comentario *</label>
+                            <textarea
+                                name="comentario"
+                                required
+                                placeholder="tu vida es tan triste para escribir aqui"
+                                id=""
+                                cols="30"
+                                rows="10"
+                            ></textarea>
+                        </li>
+                        <li>
+                            <!-- Check para publicidad -->
+                            <input
+                                type="checkbox"
+                                checked
+                                name="privacidad"
+                                id=""
+                            />
+                            <p>
+                                Utilizar mi email para enviarme publicidad
+                            </p>
+                        </li>
+                        <li>
+                            <!-- Botones del formulario -->
+                            <button type="reset">Borrar</button>
+                            <button type="submit">Enviar</button>
+                        </li>
+                    </ul>
+                </form>
+            </section>
         </main>
         <!-- FOOTER, zona inferior que se repite en todos los HTML -->
-        <footer>
-        </footer>
+        <footer></footer>
     </body>
 </html>

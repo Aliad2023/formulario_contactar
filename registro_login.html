@@ -50,10 +50,11 @@
         <!-- MAIN, zona central diferente en todos los HTML, es el contenido diferenciador de las páginas -->
         <main>
             <section class="izquierda">
-                <h4 class="izquierda__titulo">COMENTARIO ></h4>
-            </section>
-            <section class="derecha">
-                <form>
+                <article>
+                    <h4>REGISTRARSE</h4>
+                    <h5>Nuevo usuario</h5>
+                </article>
+                <form action="gracias.html" method="post">
                     <ul>
                         <li>
                             <!-- nombre -->
@@ -67,25 +68,25 @@
                                 autofocus
                                 maxlength="20"
                                 pattern="[A-Za-z]{2,20}"
-                                />
-                            </li>
-                            <li>
-                                <!-- apellidos -->
-                                <label for="apellidos">Apellidos</label>
-                                <input
-                                class="apellidos" 
+                            />
+                        </li>
+                        <li>
+                            <!-- apellidos -->
+                            <label for="apellidos">Apellidos</label>
+                            <input
+                                class="apellidos"
                                 name="apellidos"
                                 type="text"
                                 id=""
                                 placeholder="introduce tus apellidos"
                                 maxlength="25"
                                 pattern="[A-Za-z]{2,25}"
-                                />
-                            </li>
-                            <li>
-                                <!-- email -->
-                                <label for="mail">Correo electrónico *</label>
-                                <input
+                            />
+                        </li>
+                        <li>
+                            <!-- email -->
+                            <label for="mail">Correo electrónico *</label>
+                            <input
                                 name="mail"
                                 type="email"
                                 id=""
@@ -96,30 +97,78 @@
                             />
                         </li>
                         <li>
-                            <!-- comentario -->
-                            <label for="comentario">Comentario *</label>
-                            <textarea
-                                name="comentario"
+                            <!-- contraseña -->
+                            <label for="contrasena">Contraseña *</label>
+                            <input
+                                name="contrasena"
+                                type="password"
                                 id=""
                                 required
-                                placeholder="tu vida es tan triste para escribir aqui"
-                                cols="30"
-                                rows="10"
-                            ></textarea>
+                                placeholder="con mayúsculas, números y símbolos"
+                                
+                                autocomplete="off"
+                            />
                         </li>
                         <li>
-                            <!-- Check para publicidad -->
+                            <!-- verificar contraseña -->
+                            <label for="verifica"
+                                >Verifica tu contraseña *</label
+                            >
                             <input
-                                name="privacidad"
-                                type="checkbox"
+                                name="verifica"
+                                type="password"
                                 id=""
-                                checked
+                                required
+                                placeholder="repite la misma de antes"
+                                
+                                autocomplete="off"
                             />
-                            <p>Utilizar mi email para enviarme publicidad</p>
                         </li>
+
                         <li>
                             <!-- Botones del formulario -->
                             <button type="reset">Borrar</button>
+                            <button type="submit">Enviar</button>
+                        </li>
+                    </ul>
+                </form>
+            </section>
+            <section class="derecha">
+                <article>
+                    <h4>INICIAR</h4>
+                    <h5>Usuario registrado</h5>
+                </article>
+                <form action="bienvenido.html" method="post">
+                    <ul>
+                        <li>
+                            <!-- email -->
+                            <label for="mail">Correo electrónico *</label>
+                            <input
+                                name="mail"
+                                type="email"
+                                id=""
+                                required
+                                placeholder="introduce tu email personal"
+                                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,6}"
+                                autocomplete="off"
+                            />
+                        </li>
+                        <li>
+                            <!-- contraseña -->
+                            <label for="contrasena">Contraseña *</label>
+                            <input
+                                name="contrasena"
+                                type="password"
+                                id=""
+                                required
+                                placeholder="con mayúsculas, números y símbolos"
+                                pattern=""
+                                autocomplete="off"
+                            />
+                        </li>
+
+                        <li>
+                            <!-- Botones del formulario -->
                             <button type="submit">Enviar</button>
                         </li>
                     </ul>

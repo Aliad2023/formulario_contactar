@@ -4,6 +4,17 @@ html {
     font-family: sans-serif;
 }
 
+h4,h5{
+    margin: 0;
+    font-weight: 300;
+}
+h4{
+    font-size: 85px;
+}
+h5{
+    font-size: 30px;
+}
+
 /* MAIN */
 main {
     display: flex;
@@ -11,12 +22,15 @@ main {
 
 .izquierda,
 .derecha {
+    box-sizing: border-box;
     width: 50vw;
     height: 100vh;
+    padding: 3% 0;
     /* centrar a los hijos directo */
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    flex-direction: column;
 }
 
 /* IZQUIERDA */
@@ -52,8 +66,7 @@ li {
     display: flex;
     flex-direction: column;
 }
-/* checkbox */
-li:nth-child(5) {
-    flex-direction: row;
-    gap: 5px;
+
+.derecha form{
+    flex-grow: 0.5;
 }

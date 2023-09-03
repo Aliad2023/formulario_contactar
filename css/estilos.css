@@ -33,6 +33,10 @@ main {
     flex-direction: column;
 }
 
+.izquierda:hover + .derecha {
+    filter: blur(5px) sepia(10%);
+}
+
 /* IZQUIERDA */
 .izquierda {
     background-color: #d9d9d9;
@@ -51,22 +55,52 @@ main {
 form {
     width: 60%;
 }
+label{
+    color: #235182;
+}
 input,
 textarea,
 button {
+    border: 0;
     padding: 10px;
+    background-color: #d1edff;
+    border-radius: 5px;
+}
+input:focus{
+    outline:1px dashed blue;
+    background-color: rgb(233, 246, 162);
+}
+::placeholder{
+    color: #9dc8e2;
 }
 ul {
     /* separar y girar todos los li */
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 25px;
 }
 li {
     display: flex;
     flex-direction: column;
+    gap: 5px;
 }
 
 .derecha form{
     flex-grow: 0.5;
+}
+
+button{
+    border: 1px solid rgb(61, 42, 165);
+    background-color: rgba(42, 101, 165, 0.394);
+    margin: 2px;
+}
+button:hover{
+    border-radius: 30px;
+    outline: 10px solid rgb(61, 42, 165);
+    transition: 1s;
+   
+}
+input:hover, input:focus{
+    transform: scale(1.5);
+    transition: 1s;
 }
